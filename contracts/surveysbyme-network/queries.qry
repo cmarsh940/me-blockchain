@@ -1,0 +1,16 @@
+/**
+ * New query file
+ */
+query querySurvey {
+  description: "get history on a particular survey identified by surveyId"
+  statement:
+      SELECT org.me.survey.Survey
+  		  WHERE (surveyId == _$surveyId)
+}
+
+query getSurveyCategory { 
+  description: "see all of the surveys that are with a particular survey category identified by categoryId" 
+  statement: 
+  		SELECT org.me.survey.SurveyCategory
+  			WHERE (categoryId == _$categoryId ) 
+}
