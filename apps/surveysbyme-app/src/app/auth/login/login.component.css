@@ -1,0 +1,33 @@
+img {
+    padding-top: 5em;
+}
+
+form {
+    margin: auto;
+    position: fixed;
+    bottom: 6em;
+    left: 1em;
+    right: 1em;
+}
+
+.mat-form-field {
+    display: block;
+}
+
+button {
+    width:100%;
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+}
+
+a {
+    color: #FFD600;
+}
+
+#icon {
+    padding: 0;
+    width: 2em;
+}
