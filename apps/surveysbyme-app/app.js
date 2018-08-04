@@ -45,13 +45,17 @@ if (!fs.existsSync(dist)) {
 }
 const static = express.static(dist);
 
+app.options("*", cors());
+app.use(cors());
 app.use(static);
 app.use(cookieParser());
 app.use(
-  session({ secret: "thisisasecret", resave: true, saveUninitialized: true })
+	session({
+		secret: "thisisasecret",
+		resave: false,
+		saveUninitialized: true
+	})
 );
-app.options("*", cors());
-app.use(cors());
 
 proxyConfig.forEach(element => {
   const context = element.context;
