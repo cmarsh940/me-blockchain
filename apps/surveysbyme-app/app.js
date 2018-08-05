@@ -16,7 +16,6 @@
 
 const cfenv = require("cfenv");
 const express = require("express");
-const session = require("express-session");
 const fs = require("fs");
 const http = require("http");
 const path = require("path");
