@@ -13,40 +13,37 @@
  */
 
 function getTarget() {
-	if (process.env.REST_SERVER_URLS) {
-		const restServerURLs = JSON.parse(process.env.REST_SERVER_URLS);
-		const restServerURL = restServerURLs["surveysbyme-network"];
-		if (restServerURL) {
-			return restServerURL;
-		}
-	}
-	if (process.env.REST_SERVER_URL) {
-		const restServerURL = process.env.REST_SERVER_URL;
-		return restServerURL;
-	}
-	return "http://localhost:3000";
+    if (process.env.REST_SERVER_URLS) {
+        const restServerURLs = JSON.parse(process.env.REST_SERVER_URLS);
+        const restServerURL = restServerURLs['surveysbyme-network'];
+        if (restServerURL) {
+            return restServerURL;
+        }
+    }
+    if (process.env.REST_SERVER_URL) {
+        const restServerURL = process.env.REST_SERVER_URL;
+        return restServerURL;
+    }
+    return 'http://localhost:3000';
 }
 
 const target = getTarget();
 
-module.exports = [
-	{
-		context: ["/auth", "/api"],
-		target,
-		secure: true,
-		changeOrigin: true
-	},
-	{
-		context: "/",
-		target,
-		secure: true,
-		changeOrigin: true,
-		ws: true,
-		bypass: function(req, res, proxyOptions) {
-			const accept = req.headers.accept || "";
-			if (accept.indexOf("html") !== -1) {
-				return "/index.html";
-			}
-		}
-	}
-];
+module.exports = [{
+    context: ['/auth', '/api'],
+    target,
+    secure: true,
+    changeOrigin: true
+}, {
+    context: '/',
+    target,
+    secure: true,
+    changeOrigin: true,
+    ws: true,
+    bypass: function (req, res, proxyOptions) {
+        const accept = req.headers.accept || '';
+        if (accept.indexOf('html') !== -1) {
+            return '/index.html';
+        }
+    }
+}];

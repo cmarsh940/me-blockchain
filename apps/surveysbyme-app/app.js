@@ -45,17 +45,10 @@ if (!fs.existsSync(dist)) {
 }
 const static = express.static(dist);
 
-app.options("*", cors());
-app.use(cors());
 app.use(static);
 app.use(cookieParser());
-app.use(
-	session({
-		secret: "thisisasecret",
-		resave: false,
-		saveUninitialized: true
-	})
-);
+app.options("*", cors());
+app.use(cors());
 
 proxyConfig.forEach(element => {
   const context = element.context;
@@ -64,7 +57,7 @@ proxyConfig.forEach(element => {
   app.use(function(req, res, next) {
     logger.debug("------------------------------------------ incoming request ------------------------------------------");
     const bypass = typeof element.bypass === "function";
-    const bypassUrl = (bypass && element.bypass(req, res, element)) || false;
+    const bypassUrl = bypass && element.bypass(req, res, element) || false;
     if (bypassUrl) {
       req.url = bypassUrl;
       return static(req, res, next);
@@ -74,6 +67,6 @@ proxyConfig.forEach(element => {
   });
 });
 
-server.listen(appEnv.port, function() {
-  console.log("server starting on " + appEnv.url);
+server.listen(appEnv.port, function () {
+  console.log('server starting on ' + appEnv.url);
 });
