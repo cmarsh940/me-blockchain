@@ -9,29 +9,34 @@ import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
 	{
-		path: "dashboard",
+		path: "",
 		component: ClientComponent,
 		children: [
 			{
-				path: "",
+				path: "dashboard",
+				pathMatch: 'full',
 				component: DashboardComponent
 			},
-			{ 
-				path: 'Survey', 
+			{
+				path: "survey",
+				pathMatch: 'full',
 				component: SurveyComponent
-		 	},
-			{ 
-				path: 'SurveyCategory', 
+			},
+			{
+				path: "surveyCategory",
+				pathMatch: 'full',
 				component: SurveyCategoryComponent
-		 	},
-			{ 
-				path: 'Customer', 
+			},
+			{
+				path: "customer",
+				pathMatch: 'full',
 				component: CustomerComponent
-		 	},
-			{ 
-				path: 'Person', 
+			},
+			{
+				path: "profile",
+				pathMatch: 'full',
 				component: ProfileComponent
-		 	},
+			}
 		]
 	}
 ];

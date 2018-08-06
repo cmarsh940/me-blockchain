@@ -23,14 +23,14 @@ import { RegisterComponent } from './auth/register/register.component';
 @NgModule({
 	declarations: [AppComponent, LoginComponent, RegisterComponent],
 	imports: [
-		BrowserModule, 
-		ClientModule,
+		BrowserModule,
 		LandingModule,
+		ClientModule,
 		AppRoutingModule,
 		FormsModule,
 		ReactiveFormsModule,
 		HttpModule,
-		HttpClientModule, 
+		HttpClientModule,
 		BrowserAnimationsModule,
 		MaterialModule,
 		ServiceWorkerModule.register("/ngsw-worker.js", {

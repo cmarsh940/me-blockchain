@@ -6,20 +6,23 @@ import { RegisterComponent } from './auth/register/register.component';
 const routes: Routes = [
 	{
 		path: "login",
+		pathMatch: "full",
 		component: LoginComponent
 	},
 	{
 		path: "register",
+		pathMatch: "full",
 		component: RegisterComponent
+	},
+	{
+		path: "dashboard",
+		loadChildren: "./client/client.module#ClientModule"
 	},
 	{
 		path: "",
 		loadChildren: "./landing/landing.module#LandingModule"
 	},
-	{
-		path: "dashboard",
-		loadChildren: "./client/client.module#ClientModule"
-	}
+	{ path: "**", redirectTo: "" }
 ];
 
 @NgModule({
