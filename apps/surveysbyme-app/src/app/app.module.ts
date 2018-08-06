@@ -1,3 +1,4 @@
+import { MessagesComponent } from './global/messages/messages.component';
 import { ClientModule } from './client/client.module';
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
@@ -21,7 +22,7 @@ import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
-	declarations: [AppComponent, LoginComponent, RegisterComponent],
+	declarations: [AppComponent, LoginComponent, RegisterComponent, MessagesComponent],
 	imports: [
 		BrowserModule,
 		LandingModule,

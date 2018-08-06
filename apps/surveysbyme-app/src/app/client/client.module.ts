@@ -18,7 +18,7 @@ import { ProfileComponent } from './profile/profile.component';
     ClientRoutingModule,
     FormsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   declarations: [
     ClientComponent,
