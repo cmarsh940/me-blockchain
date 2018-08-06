@@ -1,6 +1,10 @@
 {
   "name": "surveysbyme-app",
   "version": "0.0.3",
+  "author": "ME LLC Group",
+  "email": "private",
+  "main": "app.js",
+  "license": "Apache-2.0",
   "engines": {
     "node": ">=8",
     "npm": ">=5"
@@ -48,6 +52,7 @@
     "rxjs-compat": "^6.2.2",
     "tether": "^1.4.0",
     "winston": "2.4.*",
+    "ws": "^2.3.1",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {

@@ -24,6 +24,7 @@ const proxyConfig = require("./proxy.conf.js");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 const winston = require("winston");
+var WebSocket = require("ws");
 
 const app = express();
 const appEnv = cfenv.getAppEnv();
@@ -66,6 +67,42 @@ proxyConfig.forEach(element => {
   });
 });
 
+var wss = new WebSocket.Server({ server: server });
+wss.on("connection", function(ws) {
+	var location = url.parse(ws.upgradeReq.url, true);
+	console.log("client connected", location.pathname);
+	var remoteURL = restServerConfig.webSocketURL + location.pathname;
+	console.log("creating remote connection", remoteURL);
+	var remote = new WebSocket(remoteURL);
+	ws.on("close", function(code, reason) {
+		console.log("client closed", location.pathname, code, reason);
+		remote.close();
+	});
+	ws.on("message", function(data) {
+		console.log("message from client", data);
+		remote.send(data);
+	});
+	remote.on("open", function() {
+		console.log("remote open", location.pathname);
+	});
+	remote.on("close", function(code, reason) {
+		console.log("remote closed", location.pathname, code, reason);
+		ws.close();
+	});
+	remote.on("message", function(data) {
+		console.log("message from remote", data);
+		ws.send(data);
+	});
+
+	remote.on("error", function(data) {
+		console.log("AN ERROR OCCURED: ", data);
+		ws.close();
+	});
+});
+
+// start server on the specified port
 server.listen(appEnv.port, function () {
+  'use strict';
+  // print a message when the server starts listening
   console.log('server starting on ' + appEnv.url);
 });

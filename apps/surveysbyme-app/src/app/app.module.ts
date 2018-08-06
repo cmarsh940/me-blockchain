@@ -1,5 +1,4 @@
 import { ClientModule } from './client/client.module';
-import { AuthModule } from './auth/auth.module';
 import { MaterialModule } from './material/material.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,12 +17,13 @@ import { ServiceWorkerModule } from "@angular/service-worker";
 import { environment } from "../environments/environment";
 import { LandingModule } from './landing/landing.module';
 import { DataService } from './global/services/data.service';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, LoginComponent, RegisterComponent],
 	imports: [
 		BrowserModule, 
-		AuthModule,
 		ClientModule,
 		LandingModule,
 		AppRoutingModule,
