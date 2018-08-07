@@ -12,22 +12,24 @@
  * limitations under the License.
  */
 
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { DataService } from './data.service';
+
 import { AppComponent } from './app.component';
 import { RegisterComponent } from "./auth/register/register.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { MessagesComponent } from "./global/messages/messages.component";
 import { LandingModule } from "./landing/landing.module";
+
 import { HttpErrorHandler } from './global/services/http-error-handler.service';
-import { MessageService } from './global/services/message.service';
 import { RequestCache, RequestCacheWithMap } from './global/services/cache.service';
 import { httpInterceptorProviders } from './global/interceptors';
 
+import { DataService } from "./data.service";
+import { MessageService } from "./global/services/message.service";
 
 
   @NgModule({

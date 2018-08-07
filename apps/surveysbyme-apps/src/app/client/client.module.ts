@@ -24,7 +24,6 @@ import { CustomerComponent } from "./Customer/Customer.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SurveyComponent } from './Survey/Survey.component';
 import { SurveyCategoryComponent } from './survey-category/survey-category.component';
-import { PersonComponent } from './person/person.component';
 import { ProfileComponent } from "./profile/profile.component";
 
 
@@ -43,7 +42,6 @@ import { ProfileComponent } from "./profile/profile.component";
 		DashboardComponent,
 		SurveyComponent,
 		SurveyCategoryComponent,
-		PersonComponent,
 		ProfileComponent
 	]
 })

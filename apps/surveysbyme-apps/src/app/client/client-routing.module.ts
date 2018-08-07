@@ -20,7 +20,6 @@ import { CustomerComponent } from "./Customer/Customer.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SurveyComponent } from './Survey/Survey.component';
 import { SurveyCategoryComponent } from './survey-category/survey-category.component';
-import { PersonComponent } from "./person/person.component";
 import { ProfileComponent } from "./profile/profile.component";
 
 
@@ -48,11 +47,6 @@ const routes: Routes = [
 				path: "customer",
 				pathMatch: 'full',
 				component: CustomerComponent
-			},
-			{
-				path: "person",
-				pathMatch: 'full',
-				component: PersonComponent
 			},
 			{
 				path: "profile",
