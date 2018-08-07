@@ -22,7 +22,7 @@ import { ClientNavComponent } from './client-nav/client-nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { SurveyComponent } from './survey/survey.component';
 import { PersonComponent } from "./person/person.component";
-import { CustomerComponent } from './customer/customer.component';
+import { CustomerComponent } from './Customer/Customer.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './profile/profile.component';
 import { SurveyCategoryComponent } from './survey-category/survey-category.component';
