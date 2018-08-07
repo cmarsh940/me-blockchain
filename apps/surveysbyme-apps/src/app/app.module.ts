@@ -19,33 +19,20 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './data.service';
 import { AppComponent } from './app.component';
-import { SurveyComponent } from './client/Survey/Survey.component';
-import { SurveyCategoryComponent } from './client/SurveyCategory/SurveyCategory.component';
-import { CustomerComponent } from './client/Customer/Customer.component';
-import { PersonComponent } from './client/Person/Person.component';
-import { addSurveyComponent } from './client/addSurvey/addSurvey.component';
 import { RegisterComponent } from "./auth/register/register.component";
 import { LoginComponent } from "./auth/login/login.component";
 import { MessagesComponent } from "./global/messages/messages.component";
-import { MaterialModule } from "./material/material.module";
 import { LandingModule } from "./landing/landing.module";
 import { HttpErrorHandler } from './global/services/http-error-handler.service';
 import { MessageService } from './global/services/message.service';
 import { RequestCache, RequestCacheWithMap } from './global/services/cache.service';
 import { httpInterceptorProviders } from './global/interceptors';
-import { HomeComponent } from './landing/home/home.component';
 
 
 
   @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    SurveyComponent,
-    SurveyCategoryComponent,
-    CustomerComponent,
-    PersonComponent,
-    addSurveyComponent,
     LoginComponent,
     RegisterComponent,
     MessagesComponent
@@ -56,7 +43,6 @@ import { HomeComponent } from './landing/home/home.component';
     ReactiveFormsModule,
     HttpModule,
     LandingModule,
-    MaterialModule,
     AppRoutingModule
   ],
   providers: [

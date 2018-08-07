@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClientComponent } from './client.component';
-import { SurveyComponent } from './survey/survey.component';
-import { CustomerComponent } from './customer/customer.component';
+import { SurveyComponent } from './Survey/Survey.component';
+import { CustomerComponent } from './Customer/Customer.component';
 import { ProfileComponent } from './profile/profile.component';
-import { SurveyCategoryComponent } from './SurveyCategory/SurveyCategory.component';
+import { SurveyCategoryComponent } from './survey-category/survey-category.component';
+
 
 const routes: Routes = [
 	{
@@ -23,7 +24,7 @@ const routes: Routes = [
 				component: SurveyComponent
 			},
 			{
-				path: "surveyCategory",
+				path: "survey_category",
 				pathMatch: 'full',
 				component: SurveyCategoryComponent
 			},

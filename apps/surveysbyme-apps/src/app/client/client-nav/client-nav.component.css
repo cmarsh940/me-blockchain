@@ -1,12 +1,19 @@
-.sidenav-container {
-  height: 100%;
+/******* NAV ********/
+nav {
+    width:100%;
+    z-index: 1;
+    font-family: 'Manuale', serif;
+    opacity: 0.8;
+}
+.navbar-nav {
+    margin-left: 15%;
 }
 
-.sidenav {
-  width: 200px;
+
+.logo {
+    height: 3rem;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
-  top: 0;
+.nav-link {
+    margin: 1em;
 }

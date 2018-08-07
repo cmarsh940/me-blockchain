@@ -1,17 +1,70 @@
-img {
-    padding-top: 5em;
+/* Large desktops and laptops */
+@media screen and (min-width: 1200px) { 
+    /******* Header ********/
+
+}
+  
+/* Landscape tablets and medium desktops */
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    /******* Header ********/
+
 }
 
-form {
-    margin: auto;
-    position: fixed;
-    bottom: 6em;
-    left: 1em;
-    right: 1em;
+/* Portrait tablets and small desktops */
+@media screen and (min-width: 815px) and (max-width: 991px) {
+    /******* Header ********/
+
 }
 
-.mat-form-field {
-    display: block;
+@media screen and (min-width: 768px) and (max-width: 814px) {
+    /******* Header ********/
+
+}
+
+/* Landscape phones and portrait tablets */
+@media screen and (max-width: 767px) {
+    /******* Header ********/
+    div.col-4 {
+        max-width: 100%;
+        min-width: 100%;
+    }
+
+}
+
+/* Portrait phones and smaller */
+@media screen and (max-width: 480px) {
+    /******* Header ********/
+
+}
+
+@media screen and (max-width: 300px) {
+    /******* Header ********/
+
+}
+
+
+.ng-valid[required], .ng-valid.required  {
+    border-left: 5px solid #42A948; /* green */
+}
+
+.ng-invalid:not(form)  {
+    border-left: 5px solid #a94442; /* red */
+}
+
+.col-4 {
+    padding:2%;
+    margin-top:5%;
+    background-color: rgb(236, 236, 236);
+    border:1px solid rgb(78, 78, 78);
+}
+
+.form-input {
+    margin:3% 0;
+}
+
+h1 {
+    font-family: 'Manuale', serif;
+    margin-bottom: 3%;
 }
 
 button {

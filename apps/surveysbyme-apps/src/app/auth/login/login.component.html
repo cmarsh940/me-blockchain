@@ -1,15 +1,9 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <a routerLink="/">
-      Surveys by ME
-    </a>
-  </mat-toolbar-row>
-</mat-toolbar>
+
 
 <div class="container">
   <form (submit)="loginClient()" #loginForm="ngForm">
     <!-- ** EMAIL ** -->
-    <mat-form-field appearance="outline">
+    <!-- <mat-form-field appearance="outline">
       <mat-label>Email</mat-label>
       <span matPrefix>
         <mat-icon>
@@ -17,10 +11,10 @@
         </mat-icon>
       </span>
       <input matInput placeholder="Enter your email" autocomplete="email" name="email" required [(ngModel)]="currentClient.email">
-    </mat-form-field>
+    </mat-form-field> -->
 
     <!-- **  PASSWORD ** -->
-    <mat-form-field appearance="outline">
+    <!-- <mat-form-field appearance="outline">
       <mat-label>Password</mat-label>
       <span matPrefix>
         <mat-icon>
@@ -32,16 +26,15 @@
       <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility' : 'visibility_off'}}</mat-icon>
     </mat-form-field>
     <button mat-stroked-button type="submit" value="Login" [disabled]="!loginForm.valid" color="primary">Login
-    </button>
+    </button> -->
   </form>
-  <div>
+  <!-- <div>
     <p class="text-center" [ngStyle]="{ 'color': 'red' }" *ngFor="let error of errors">{{ error }}</p>
-  </div>
+  </div>  -->
 </div>
-<mat-toolbar id="footer" color="primary">
-  <div class="text-center">
-    <p class="mat-h5">Don't have a account?
-      <a routerLink="/register" color="accent">Sign up</a>
-    </p>
-  </div>
-</mat-toolbar>
+
+<div id="footer" class="text-center">
+  <p class="mat-h5">Don't have a account?
+    <a routerLink="/register" color="accent">Sign up</a>
+  </p>
+</div>

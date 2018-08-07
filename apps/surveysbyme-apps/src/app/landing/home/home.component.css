@@ -110,12 +110,3 @@ h1, h3, h6 {
 #container-middle {
   padding: 0;
 }
-
-mat-grid-tile {
-  background: #181818;
-  color: #fff;
-}
-
-.accordion {
-  width: 100%;
-}

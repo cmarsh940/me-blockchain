@@ -19,8 +19,8 @@ import 'rxjs/add/operator/toPromise';
 
 @Component({
   selector: 'app-person',
-  templateUrl: './Person.component.html',
-  styleUrls: ['./Person.component.css'],
+  templateUrl: './person.component.html',
+  styleUrls: ['./person.component.css'],
   providers: [PersonService]
 })
 export class PersonComponent implements OnInit {

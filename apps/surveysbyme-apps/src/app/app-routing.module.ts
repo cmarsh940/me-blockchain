@@ -15,23 +15,34 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { SurveyComponent } from './client/Survey/Survey.component';
-import { SurveyCategoryComponent } from './client/SurveyCategory/SurveyCategory.component';
+
 import { CustomerComponent } from './client/Customer/Customer.component';
-import { PersonComponent } from './client/Person/Person.component';
-import { addSurveyComponent } from './client/addSurvey/addSurvey.component';
 import { LandingComponent } from './landing/landing.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 
 
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
-  { path: 'Survey', component: SurveyComponent },
-  { path: 'SurveyCategory', component: SurveyCategoryComponent },
-  { path: 'Customer', component: CustomerComponent },
-  { path: 'Person', component: PersonComponent },
-  { path: 'addSurvey', component: addSurveyComponent },
-  { path: '**', redirectTo: '' }
+  {
+		path: "login",
+		pathMatch: "full",
+		component: LoginComponent
+	},
+	{
+		path: "register",
+		pathMatch: "full",
+		component: RegisterComponent
+	},
+	{
+		path: "dashboard",
+		loadChildren: "./client/client.module#ClientModule"
+	},
+	{
+		path: "",
+		loadChildren: "./landing/landing.module#LandingModule"
+	},
+	{ path: "**", redirectTo: "" }
 ];
 
 @NgModule({

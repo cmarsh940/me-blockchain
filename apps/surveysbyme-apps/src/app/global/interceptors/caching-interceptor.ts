@@ -8,10 +8,11 @@ import {
 	HttpHandler
 } from "@angular/common/http";
 
-import { Observable, of } from "rxjs";
+import { Observable } from "rxjs";
 import { startWith, tap } from "rxjs/operators";
 
 import { RequestCache } from "../services/cache.service";
+import { of } from "rxjs/observable/of";
 
 /**
  * If request is cachable and

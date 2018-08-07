@@ -14,13 +14,13 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { CustomerService } from './Customer.service';
 import 'rxjs/add/operator/toPromise';
+import { CustomerService } from './Customer.service';
 
 @Component({
   selector: 'app-customer',
-  templateUrl: './Customer.component.html',
-  styleUrls: ['./Customer.component.css'],
+  templateUrl: './customer.component.html',
+  styleUrls: ['./customer.component.css'],
   providers: [CustomerService]
 })
 export class CustomerComponent implements OnInit {

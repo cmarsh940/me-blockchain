@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '../../../../node_modules/@angular/router';
-import { Validators, FormControl } from '../../../../node_modules/@angular/forms';
+import { Router } from '@angular/router';
+import { Validators, FormControl } from '@angular/forms';
 import { User } from '../../models/user';
 import { ClientService } from '../../client/client.service';
 

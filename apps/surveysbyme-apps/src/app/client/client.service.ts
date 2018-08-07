@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import { DataService } from '../global/services/data.service';
+
 import { Observable } from 'rxjs/Observable';
 import { Person } from '../org.me.survey';
-import 'rxjs/Rx';
+import 'rxjs';
 import { User } from '../models/user';
-import { Http } from '../../../node_modules/@angular/http';
+import { Http } from '@angular/http';
+import { DataService } from '../data.service';
 
 // Can be injected into a constructor
-@Injectable({
-	providedIn: "root"
-})
+@Injectable()
 export class ClientService {
 	currentClient: User = null;
 

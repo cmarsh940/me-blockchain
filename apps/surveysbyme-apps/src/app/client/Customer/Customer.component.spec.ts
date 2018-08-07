@@ -20,7 +20,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import * as sinon from 'sinon';
-import { DataService } from '../data.service';
+import { DataService } from '../../data.service';
 import { CustomerComponent } from './Customer.component';
 import { CustomerService } from './Customer.service';
 import { Observable } from 'rxjs';

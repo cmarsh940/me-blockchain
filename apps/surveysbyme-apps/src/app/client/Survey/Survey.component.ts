@@ -14,13 +14,13 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { SurveyService } from './Survey.service';
 import 'rxjs/add/operator/toPromise';
+import { SurveyService } from './Survey.service';
 
 @Component({
   selector: 'app-survey',
-  templateUrl: './Survey.component.html',
-  styleUrls: ['./Survey.component.css'],
+  templateUrl: './survey.component.html',
+  styleUrls: ['./survey.component.css'],
   providers: [SurveyService]
 })
 export class SurveyComponent implements OnInit {

@@ -20,10 +20,11 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import * as sinon from 'sinon';
-import { DataService } from '../data.service';
-import { SurveyCategoryComponent } from './SurveyCategory.component';
-import { SurveyCategoryService } from './SurveyCategory.service';
+import { DataService } from '../../data.service';
+
 import { Observable } from 'rxjs'
+import { SurveyCategoryComponent } from './survey-category.component';
+import { SurveyCategoryService } from './survey-category.service';
 
 describe('SurveyCategoryComponent', () => {
   let component: SurveyCategoryComponent;

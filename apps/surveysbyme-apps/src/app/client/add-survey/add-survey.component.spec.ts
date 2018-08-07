@@ -20,9 +20,9 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as sinon from 'sinon';
-import { DataService } from '../data.service';
-import { addSurveyComponent } from './addSurvey.component';
-import {addSurveyService} from './addSurvey.service';
+import { DataService } from '../../data.service';
+import { addSurveyComponent } from './add-survey.component';
+import {addSurveyService} from './add-survey.service';
 
 describe('addSurveyComponent', () => {
   let component: addSurveyComponent;

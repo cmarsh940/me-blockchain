@@ -20,7 +20,7 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import * as sinon from 'sinon';
-import { DataService } from '../data.service';
+import { DataService } from '../../data.service';
 import { SurveyComponent } from './Survey.component';
 import { SurveyService } from './Survey.service';
 import { Observable } from 'rxjs'

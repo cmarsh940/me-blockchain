@@ -14,13 +14,14 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { SurveyCategoryService } from './SurveyCategory.service';
+
 import 'rxjs/add/operator/toPromise';
+import { SurveyCategoryService } from './survey-category.service';
 
 @Component({
   selector: 'app-surveycategory',
-  templateUrl: './SurveyCategory.component.html',
-  styleUrls: ['./SurveyCategory.component.css'],
+  templateUrl: './survey-category.component.html',
+  styleUrls: ['./survey-category.component.css'],
   providers: [SurveyCategoryService]
 })
 export class SurveyCategoryComponent implements OnInit {
