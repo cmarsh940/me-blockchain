@@ -14,12 +14,14 @@
 
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+
+import { ClientComponent } from "./client.component";
+import { CustomerComponent } from "./Customer/Customer.component";
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ClientComponent } from './client.component';
 import { SurveyComponent } from './Survey/Survey.component';
-import { CustomerComponent } from './Customer/Customer.component';
-import { ProfileComponent } from './profile/profile.component';
 import { SurveyCategoryComponent } from './survey-category/survey-category.component';
+import { PersonComponent } from "./person/person.component";
+import { ProfileComponent } from "./profile/profile.component";
 
 
 const routes: Routes = [
@@ -46,6 +48,11 @@ const routes: Routes = [
 				path: "customer",
 				pathMatch: 'full',
 				component: CustomerComponent
+			},
+			{
+				path: "person",
+				pathMatch: 'full',
+				component: PersonComponent
 			},
 			{
 				path: "profile",
