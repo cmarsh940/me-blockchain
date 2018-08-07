@@ -15,18 +15,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component';
+import { SurveyComponent } from './client/Survey/Survey.component';
+import { SurveyCategoryComponent } from './client/SurveyCategory/SurveyCategory.component';
+import { CustomerComponent } from './client/Customer/Customer.component';
+import { PersonComponent } from './client/Person/Person.component';
+import { addSurveyComponent } from './client/addSurvey/addSurvey.component';
+import { LandingComponent } from './landing/landing.component';
 
-import { SurveyComponent } from './Survey/Survey.component';
-import { SurveyCategoryComponent } from './SurveyCategory/SurveyCategory.component';
 
-import { CustomerComponent } from './Customer/Customer.component';
-import { PersonComponent } from './Person/Person.component';
-
-import { addSurveyComponent } from './addSurvey/addSurvey.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LandingComponent },
   { path: 'Survey', component: SurveyComponent },
   { path: 'SurveyCategory', component: SurveyCategoryComponent },
   { path: 'Customer', component: CustomerComponent },

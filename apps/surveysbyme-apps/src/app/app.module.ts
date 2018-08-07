@@ -19,15 +19,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { DataService } from './data.service';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
+import { SurveyComponent } from './client/Survey/Survey.component';
+import { SurveyCategoryComponent } from './client/SurveyCategory/SurveyCategory.component';
+import { CustomerComponent } from './client/Customer/Customer.component';
+import { PersonComponent } from './client/Person/Person.component';
+import { addSurveyComponent } from './client/addSurvey/addSurvey.component';
+import { RegisterComponent } from "./auth/register/register.component";
+import { LoginComponent } from "./auth/login/login.component";
+import { MessagesComponent } from "./global/messages/messages.component";
+import { MaterialModule } from "./material/material.module";
+import { LandingModule } from "./landing/landing.module";
+import { HttpErrorHandler } from './global/services/http-error-handler.service';
+import { MessageService } from './global/services/message.service';
+import { RequestCache, RequestCacheWithMap } from './global/services/cache.service';
+import { httpInterceptorProviders } from './global/interceptors';
+import { HomeComponent } from './landing/home/home.component';
 
-import { SurveyComponent } from './Survey/Survey.component';
-import { SurveyCategoryComponent } from './SurveyCategory/SurveyCategory.component';
 
-import { CustomerComponent } from './Customer/Customer.component';
-import { PersonComponent } from './Person/Person.component';
-
-import { addSurveyComponent } from './addSurvey/addSurvey.component';
 
   @NgModule({
   declarations: [
@@ -37,17 +45,26 @@ import { addSurveyComponent } from './addSurvey/addSurvey.component';
     SurveyCategoryComponent,
     CustomerComponent,
     PersonComponent,
-    addSurveyComponent
+    addSurveyComponent,
+    LoginComponent,
+    RegisterComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
+    LandingModule,
+    MaterialModule,
     AppRoutingModule
   ],
   providers: [
-    DataService
+    DataService,
+    HttpErrorHandler,
+    MessageService,
+    { provide: RequestCache, useClass: RequestCacheWithMap },
+    httpInterceptorProviders
   ],
   bootstrap: [AppComponent]
 })
