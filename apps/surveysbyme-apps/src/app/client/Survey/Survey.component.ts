@@ -15,7 +15,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import 'rxjs/add/operator/toPromise';
-import { SurveyService } from './Survey.service';
+import { SurveyService } from './survey.service';
 
 @Component({
   selector: 'app-survey',

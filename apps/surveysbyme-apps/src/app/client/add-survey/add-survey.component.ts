@@ -20,7 +20,7 @@ import 'rxjs/add/operator/toPromise';
 @Component({
 	selector: "app-addsurvey",
 	templateUrl: "./add-survey.component.html",
-  styleUrls: ["./add-survey.component.css"],
+  	styleUrls: ["./add-survey.component.css"],
 	providers: [addSurveyService]
 })
 export class addSurveyComponent implements OnInit {
