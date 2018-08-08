@@ -22,6 +22,22 @@ import { AppComponent } from './app.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { MessagesComponent } from './global/messages/messages.component';
+import { LandingComponent } from './landing/landing.component';
+import { FooterComponent } from './landing/footer/footer.component';
+import { RightsComponent } from './landing/footer/rights/rights.component';
+import { HomeComponent } from './landing/home/home.component';
+import { LandingNavComponent } from './landing/landing-nav/landing-nav.component';
+import { ProfileComponent } from './Client/Profile/Profile.component';
+import { PersonComponent } from './Client/Person/Person.component';
+import { SurveyComponent } from './Client/Survey/Survey.component';
+import { SurveyCategoryComponent } from './Client/SurveyCategory/SurveyCategory.component';
+import { DashboardComponent } from './Client/Dashboard/Dashboard.component';
+import { ClientNavComponent } from './Client/ClientNav/ClientNav.component';
+import { ClientComponent } from './Client/client.component';
+import { CustomerComponent } from './Client/Customer/Customer.component';
+import { addSurveyComponent } from './Client/addSurvey/addSurvey.component';
+
+
 
 import { HttpErrorHandler } from './global/services/http-error-handler.service';
 import { RequestCache, RequestCacheWithMap } from './global/services/cache.service';
@@ -29,21 +45,15 @@ import { httpInterceptorProviders } from './global/interceptors';
 
 import { DataService } from './data.service';
 import { MessageService } from './global/services/message.service';
-import { LandingComponent } from './landing/landing.component';
-import { FooterComponent } from './landing/footer/footer.component';
-import { RightsComponent } from './landing/footer/rights/rights.component';
-import { HomeComponent } from './landing/home/home.component';
-import { LandingNavComponent } from './landing/landing-nav/landing-nav.component';
-import { addSurveyComponent } from './client/add-survey/add-survey.component';
-import { ClientComponent } from './client/client.component';
-import { ClientNavComponent } from './client/client-nav/client-nav.component';
-import { DashboardComponent } from './client/dashboard/dashboard.component';
+import { addSurveyService } from './Client/addSurvey/addSurvey.service';
+import { PersonService } from './Client/Person/Person.service';
+import { SurveyCategoryService } from './Client/SurveyCategory/SurveyCategory.service';
+import { SurveyService } from './Client/Survey/Survey.service';
+import { CustomerService } from './Client/Customer/Customer.service';
 
-import { SurveyCategoryComponent } from './client/survey-category/survey-category.component';
-import { ProfileComponent } from './client/profile/profile.component';
-import { PersonComponent } from './client/person/person.component';
-import { SurveyComponent } from './client/Survey/Survey.component';
-import { CustomerComponent } from './client/Customer/Customer.component';
+
+
+
 
 
   @NgModule({
@@ -75,7 +85,12 @@ import { CustomerComponent } from './client/Customer/Customer.component';
     AppRoutingModule
   ],
   providers: [
-    DataService,
+		DataService,
+		CustomerService,
+		SurveyService,
+		SurveyCategoryService,
+		PersonService,
+		addSurveyService,
     HttpErrorHandler,
     MessageService,
     { provide: RequestCache, useClass: RequestCacheWithMap },

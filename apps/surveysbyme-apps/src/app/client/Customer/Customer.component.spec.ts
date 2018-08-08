@@ -22,7 +22,7 @@ import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angul
 import * as sinon from 'sinon';
 import { DataService } from '../../data.service';
 import { CustomerComponent } from './Customer.component';
-import { CustomerService } from './Customer.service';
+import { CustomerService } from './customer.service';
 import { Observable } from 'rxjs';
 
 describe('CustomerComponent', () => {

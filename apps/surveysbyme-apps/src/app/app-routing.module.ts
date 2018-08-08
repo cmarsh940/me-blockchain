@@ -16,17 +16,18 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 
-import { CustomerComponent } from './client/Customer/Customer.component';
 import { LandingComponent } from './landing/landing.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
-import { ClientComponent } from './client/client.component';
-import { DashboardComponent } from './client/dashboard/dashboard.component';
-import { SurveyComponent } from './client/Survey/Survey.component';
-import { SurveyCategoryComponent } from './client/survey-category/survey-category.component';
-import { ProfileComponent } from './client/profile/profile.component';
 import { HomeComponent } from './landing/home/home.component';
 import { RightsComponent } from './landing/footer/rights/rights.component';
+import { addSurveyComponent } from './Client/addSurvey/addSurvey.component';
+import { ProfileComponent } from './Client/Profile/Profile.component';
+import { CustomerComponent } from './Client/Customer/Customer.component';
+import { SurveyCategoryComponent } from './Client/SurveyCategory/SurveyCategory.component';
+import { SurveyComponent } from './Client/Survey/Survey.component';
+import { DashboardComponent } from './Client/Dashboard/Dashboard.component';
+import { ClientComponent } from './Client/client.component';
 
 
 
@@ -35,7 +36,6 @@ const routes: Routes = [
 		path: "",
 		component: LandingComponent,
 		children: [
-			{ path: "", pathMatch: "full", component: DashboardComponent },
 			{
 				path: "",
 				pathMatch: "full",
@@ -67,6 +67,11 @@ const routes: Routes = [
 				path: "customer",
 				pathMatch: "full",
 				component: CustomerComponent
+			},
+			{
+				path: "addSurvey",
+				pathMatch: "full",
+				component: addSurveyComponent
 			},
 			{
 				path: "profile",

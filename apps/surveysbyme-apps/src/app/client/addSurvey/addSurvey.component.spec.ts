@@ -1,3 +1,5 @@
+import { addSurveyService } from './../AddSurvey/AddSurvey.service';
+import { addSurveyComponent } from './../AddSurvey/AddSurvey.component';
 /*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -21,8 +23,7 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import * as sinon from 'sinon';
 import { DataService } from '../../data.service';
-import { addSurveyComponent } from './add-survey.component';
-import {addSurveyService} from './add-survey.service';
+
 
 describe('addSurveyComponent', () => {
   let component: addSurveyComponent;

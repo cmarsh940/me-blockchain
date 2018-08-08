@@ -15,7 +15,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 import 'rxjs/add/operator/toPromise';
-import { CustomerService } from './customer.service';
+
+import { CustomerService } from './Customer.service';
+
 
 @Component({
   selector: 'app-customer',
@@ -128,7 +130,7 @@ export class CustomerComponent implements OnInit {
         'phone': null,
         'surveyOwner': null
       });
-      this.loadAll(); 
+      this.loadAll();
     })
     .catch((error) => {
       if (error === 'Server error') {

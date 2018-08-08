@@ -13,8 +13,8 @@
  */
 
 import { Injectable } from '@angular/core';
-import { DataService } from '../../data.service';
 import { Observable } from 'rxjs/Observable';
+import { DataService } from '../../data.service';
 import { Survey } from '../../org.me.survey';
 import 'rxjs';
 

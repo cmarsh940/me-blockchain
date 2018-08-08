@@ -14,8 +14,9 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { PersonService } from './person.service';
 import 'rxjs/add/operator/toPromise';
+
+import { PersonService } from './Person.service';
 
 @Component({
   selector: 'app-person',

@@ -13,10 +13,11 @@
  */
 
 import { Injectable } from '@angular/core';
-import { DataService } from '../../data.service';
 import { Observable } from 'rxjs/Observable';
-import { SurveyCategory } from '../../org.me.survey';
 import 'rxjs';
+
+import { DataService } from '../../data.service';
+import { SurveyCategory } from '../../org.me.survey';
 
 // Can be injected into a constructor
 @Injectable()

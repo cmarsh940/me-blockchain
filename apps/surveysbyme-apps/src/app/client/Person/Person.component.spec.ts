@@ -21,8 +21,8 @@ import { HttpModule } from '@angular/http';
 import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angular/forms';
 import * as sinon from 'sinon';
 import { DataService } from '../../data.service';
-import { PersonComponent } from './Person.component';
-import { PersonService } from './Person.service';
+import { PersonComponent } from './person.component';
+import { PersonService } from './person.service';
 import { Observable } from 'rxjs';
 
 describe('PersonComponent', () => {

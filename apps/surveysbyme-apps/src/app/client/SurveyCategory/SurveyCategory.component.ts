@@ -1,3 +1,4 @@
+
 /*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +15,14 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-
 import 'rxjs/add/operator/toPromise';
-import { SurveyCategoryService } from './survey-category.service';
+
+import { SurveyCategoryService } from './SurveyCategory.service';
 
 @Component({
   selector: 'app-surveycategory',
-  templateUrl: './survey-category.component.html',
-  styleUrls: ['./survey-category.component.css'],
+  templateUrl: './SurveyCategory.component.html',
+  styleUrls: ['./SurveyCategory.component.css'],
   providers: [SurveyCategoryService]
 })
 export class SurveyCategoryComponent implements OnInit {

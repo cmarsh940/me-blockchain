@@ -22,7 +22,7 @@ import { FormsModule, ReactiveFormsModule, FormGroup, FormControl } from '@angul
 import * as sinon from 'sinon';
 import { DataService } from '../../data.service';
 import { SurveyComponent } from './Survey.component';
-import { SurveyService } from './Survey.service';
+import { SurveyService } from './survey.service';
 import { Observable } from 'rxjs'
 
 describe('SurveyComponent', () => {
