@@ -1,4 +1,3 @@
-import { PersonComponent } from './client/person/person.component';
 /*
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -20,16 +19,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { RegisterComponent } from "./auth/register/register.component";
-import { LoginComponent } from "./auth/login/login.component";
-import { MessagesComponent } from "./global/messages/messages.component";
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { MessagesComponent } from './global/messages/messages.component';
 
 import { HttpErrorHandler } from './global/services/http-error-handler.service';
 import { RequestCache, RequestCacheWithMap } from './global/services/cache.service';
 import { httpInterceptorProviders } from './global/interceptors';
 
-import { DataService } from "./data.service";
-import { MessageService } from "./global/services/message.service";
+import { DataService } from './data.service';
+import { MessageService } from './global/services/message.service';
 import { LandingComponent } from './landing/landing.component';
 import { FooterComponent } from './landing/footer/footer.component';
 import { RightsComponent } from './landing/footer/rights/rights.component';
@@ -38,11 +37,13 @@ import { LandingNavComponent } from './landing/landing-nav/landing-nav.component
 import { addSurveyComponent } from './client/add-survey/add-survey.component';
 import { ClientComponent } from './client/client.component';
 import { ClientNavComponent } from './client/client-nav/client-nav.component';
-import { CustomerComponent } from './client/Customer/Customer.component';
 import { DashboardComponent } from './client/dashboard/dashboard.component';
-import { SurveyComponent } from './client/Survey/Survey.component';
+
 import { SurveyCategoryComponent } from './client/survey-category/survey-category.component';
 import { ProfileComponent } from './client/profile/profile.component';
+import { PersonComponent } from './client/person/person.component';
+import { SurveyComponent } from './client/Survey/Survey.component';
+import { CustomerComponent } from './client/Customer/Customer.component';
 
 
   @NgModule({
@@ -56,13 +57,13 @@ import { ProfileComponent } from './client/profile/profile.component';
     RightsComponent,
     HomeComponent,
     LandingNavComponent,
-    addSurveyComponent,
+		addSurveyComponent,
+		CustomerComponent,
     ClientComponent,
     ClientNavComponent,
-    CustomerComponent,
     DashboardComponent,
-    SurveyComponent,
-    SurveyCategoryComponent,
+		SurveyCategoryComponent,
+		SurveyComponent,
     PersonComponent,
     ProfileComponent
   ],

@@ -178,7 +178,7 @@ export class PersonComponent implements OnInit {
         'subscription': null,
         'numberOfSurveys': null
       });
-      this.loadAll(); 
+      this.loadAll();
     })
     .catch((error) => {
       if (error === 'Server error') {
